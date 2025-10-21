@@ -33,7 +33,11 @@ class User extends AbstractUser
         $this->name = $name;
         $this->login = $login;
         $this->password = $password;
-        self::$userCount++;
+        
+        if (static::class === self::class) {
+            self::$userCount++;
+        }
+        // self::$userCount++;
     }
 
     /**
