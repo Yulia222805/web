@@ -15,7 +15,7 @@ class MarkdownView
         $markdown = "# Пользователи\n\n";
         foreach ($this->users as $user) {
             $markdown .= "- **Имя:** {$user->first_name} {$user->last_name}\n";
-            $markdown .= "  - Email: `{$user->email}`\n\n";
+            $markdown .= "  - **Email:** {$user->email}\n\n";
         }
         return $markdown;
     }
